@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoffeemaniaGeographyService.Dtos;
+using CoffeemaniaGeographyService.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeemaniaGeographyService.Controllers;
 
 [Route("distance")]
-public class DistanceController : Controller
+public class DistanceController(IDistanceService distanceService) : Controller
 {
     [HttpPost]
-    public ActionResult<int> CalculateDistance()
+    public ActionResult<CalculateDistanceResult> CalculateDistance(
+        [FromBody]CalculateDistanceRequest request)
     {
-        return Ok(10);
+        var result = distanceService.CalculateDistance(request.GeoPoint1, request.GeoPoint2);
+        return Ok(result);
     }
 }

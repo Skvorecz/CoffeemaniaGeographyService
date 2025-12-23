@@ -1,8 +1,11 @@
+using CoffeemaniaGeographyService.Services;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+
+AddServices(builder.Services);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -24,3 +27,8 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+static void AddServices(IServiceCollection services)
+{
+    services.AddSingleton<IDistanceService, DistanceService>();
+}
