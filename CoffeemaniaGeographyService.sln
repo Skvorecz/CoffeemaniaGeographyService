@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeemaniaGeographyService", "CoffeemaniaGeographyService\CoffeemaniaGeographyService.csproj", "{7F807B9A-44A0-4CCC-B800-4855172424EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F807B9A-44A0-4CCC-B800-4855172424EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F807B9A-44A0-4CCC-B800-4855172424EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F807B9A-44A0-4CCC-B800-4855172424EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F807B9A-44A0-4CCC-B800-4855172424EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
