@@ -37,6 +37,7 @@ public class DistanceService : IDistanceService
         {
             return 0;
         }
+        
         return distance;
     }
 
