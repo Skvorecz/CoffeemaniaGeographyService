@@ -16,7 +16,7 @@ public class DistanceServiceTests
 
         var result = _distanceService.CalculateDistanceInKilometers(point, point);
 
-        result.Should().BeApproximately(0, 0.0001);
+        result.Should().Be(0);
     }
 
     [Test]

@@ -32,6 +32,11 @@ public class DistanceService : IDistanceService
             2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
         var distance = EarthRadiusKilometers * angularDistance;
+        
+        if (Math.Abs(distance) < 1e-6)
+        {
+            return 0;
+        }
         return distance;
     }
 
