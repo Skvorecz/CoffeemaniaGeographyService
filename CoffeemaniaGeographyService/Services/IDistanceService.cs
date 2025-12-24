@@ -4,5 +4,5 @@ namespace CoffeemaniaGeographyService.Services;
 
 public interface IDistanceService
 {
-    CalculateDistanceResult CalculateDistance(GeoPoint firstPoint, GeoPoint secondPoint);
+    double CalculateDistanceInKilometers(GeoPoint firstPoint, GeoPoint secondPoint);
 }

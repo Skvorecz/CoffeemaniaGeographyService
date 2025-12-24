@@ -4,10 +4,10 @@ namespace CoffeemaniaGeographyService.Services;
 
 public class DistanceService : IDistanceService
 {
-    public CalculateDistanceResult CalculateDistance(GeoPoint firstPoint, GeoPoint secondPoint)
-    {
-        const double EarthRadiusKilometers = 6371;
+    private const double EarthRadiusKilometers = 6371;
 
+    public double CalculateDistanceInKilometers(GeoPoint firstPoint, GeoPoint secondPoint)
+    {
         var latitudeDifferenceRadians =
             DegreesToRadians(secondPoint.Latitude - firstPoint.Latitude);
 
@@ -32,9 +32,9 @@ public class DistanceService : IDistanceService
             2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
         var distance = EarthRadiusKilometers * angularDistance;
-        return new CalculateDistanceResult(distance);
+        return distance;
     }
-    
+
     private double DegreesToRadians(double degrees)
     {
         return degrees * Math.PI / 180;
